@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    position: relative;
+    overflow: hidden;
+}
+
+.left-text {
+    position: absolute;
+    top: 30%; /* 根据需要调整位置 */
+    left: 20%;
+    font-size: 60px; /* 初始字体大小 */
+    color: #333; /* 初始字体颜色 */
+}
+
+.left-text p {
+    margin: 0;
+}
+
+.photo-container {
+    transition: transform 0.3s;
+    position: absolute;
+    top: 20%; /* 调整人物图像的垂直位置 */
+    right: 20%; /* 调整人物图像的水平位置 */
+}
+
+.photo {
+    width: 350px; /* 初始大小，根据需要调整 */
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.photo:hover {
+    transform: scale(1.2); /* 放大 1.2 倍 */
+}
+
+footer .bottom-left {
+    position: absolute;
+    bottom: 45%; /* 调整时间的垂直位置 */
+    left: 20%;
+    font-size: 18px; /* 调整大小 */
+    color: #b3aeae;
+}

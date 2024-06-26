@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amber Web Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <!-- 移除顶部内容 -->
+</header>
+
+<main>
+    <div class="left-text">
+        <p>Amber Li</p>
+    </div>
+    <div class="photo-container">
+        <img src="myphoto/me.png" alt="My Photo" class="photo" onclick="window.location.href='second_page.html'">
+    </div>
+</main>
+
+<footer>
+    <div class="bottom-left">
+        <div id="beijing-time">--:--:--</div>
+    </div>
+</footer>
+
+<script>
+    function updateBeijingTime() {
+        const now = new Date();
+        const beijingOffset = 8 * 60; // 北京时间比UTC快8小时
+        const localOffset = now.getTimezoneOffset(); // 本地时区相对于UTC的偏移分钟数
+        const beijingTime = new Date(now.getTime() + (beijingOffset + localOffset) * 60 * 1000);
+        const formattedTime = beijingTime.toLocaleTimeString('zh-CN', { hour12: false });
+        document.getElementById('beijing-time').innerText = '' + formattedTime;
+    }
+
+    setInterval(updateBeijingTime, 1000);
+    updateBeijingTime();
+</script>
+
+</body>
+</html>
